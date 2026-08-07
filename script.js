@@ -162,7 +162,7 @@ function submitForm(event) {
   // 4. Envoi vers WhatsApp
   setTimeout(() => {
   const urlWhatsApp = `https://wa.me/${224627288828}?text=${encodeURIComponent(message)}`;
-  window.location.href = urlWhatsApp;}, 2500); // Délai de 500ms pour laisser le temps à l'animation de se terminer
+  window.location.href = urlWhatsApp;}, 3500); // Délai de 3500ms pour laisser le temps à l'animation de se terminer
 
 // Masquer le formulaire (étape 2) et afficher la confirmation finale (étape 3)
 document.getElementById('step-2').classList.remove('active');
