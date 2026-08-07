@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitation Spéciale</title>
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Conteneur pour les cœurs flottants d'arrière-plan -->
+  <div id="hearts-container"></div>
+
+  <!-- Carte d'invitation principale -->
+  <div class="card">
+    
+    <!-- ÉTAPE 1 : La question -->
+    <div id="step-1" class="step active">
+      <h1>Une petite question...</h1>
+      <p> Veux-tu sortir avec moi ?</p>
+      <div class="btn-group" id="btn-group">
+        <button id="btn-yes" class="btn-yes" onclick="nextStep(2)">Oui !</button>
+        <button id="btn-no" class="btn-no" onclick="showErrorModal()">Non</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 2 : Choix de l'activité, de la date et de l'heure -->
+    <div id="step-2" class="step">
+      <h2>Excellente décision ! 🔥</h2>
+      <p>j'attends le programme !</p>
+
+      <form id="invite-form" onsubmit="submitForm(event)">
+        <div class="options">
+          <label class="option-card">
+            <input type="radio" name="activity" value="Un délicieux restaurant" required checked>
+            <span>Restaurant🍷</span>
+          </label>
+          <label class="option-card">
+            <input type="radio" name="activity" value="Une séance au cinéma" required>
+            <span>Cinéma 🍿</span>
+          </label>
+          <label class="option-card">
+            <input type="radio" name="activity" value="Une simple promenade" required>
+            <span>Une promenade tranquille 🌙</span>
+          </label>
+          <label class="option-card">
+            <input type="radio" name="activity" value="Une soirée jeux de société" required>
+            <span>Soirée jeux de société 🎲</span>
+          </label> 
+        <label class="option-card">
+            <input type="radio" name="activity" value="fast-food" required>
+            <span>Fast-food 🍔</span>
+          </label>
+        </div>
+
+        <div class="field-group">
+          <label for="date">Date :</label>
+          <input type="date" id="date" required>
+        </div>
+
+        <div class="field-group">
+          <label for="time">l'heure :</label>
+          <input type="time" id="time" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Terminer</button>
+      </form>
+    </div>
+
+    <!-- ÉTAPE 3 : Message final & confirmation -->
+    <div id="step-3" class="step">
+      <h2>ET c'est bonnnnnn! 😉</h2>
+      <p>Merciiii d'avoir acceptéeee.</p>
+      
+      <div class="spicy-note">
+        "Prépare-toi bien, parce que je ne compte pas te laisser filer de sitôt une fois sur place... 😏🔥"
+      </div>
+    </div>
+  </div>
+
+  <!-- Modale d'erreur personnalisée -->
+  <div id="error-modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon">⚠️</div>
+      <h3>Erreur Système 404</h3>
+      <p>L'option <strong>"Non"</strong> est momentanément indisponible sur ce téléphone. Veuillez sélectionner l'option valide ! 😉</p>
+      <button class="btn-modal" onclick="closeErrorModal()">Compris, je clique sur Oui !</button>
+    </div>
+  </div>
+
+  <!-- Lien vers le fichier JavaScript externe -->
+  <script src="script.js"></script>
+</body>
+</html>
