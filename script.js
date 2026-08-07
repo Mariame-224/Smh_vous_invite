@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------
 // CONFIGURATION (Votre numéro WhatsApp)
 // ------------------------------------------------------------------
-const MON_NUMERO_WHATSAPP = "393513418945"; // mon numéro WhatsApp au format international (sans le '+', ex: 33600000000)
+const MON_NUMERO_WHATSAPP = "224627288828"; // mon numéro WhatsApp au format international (sans le '+', ex: 33600000000)
 
 const btnNo = document.getElementById('btn-no');
 const btnYes = document.getElementById('btn-yes');
@@ -150,7 +150,7 @@ function submitForm(event) {
   }
 
   // 2. Numéro WhatsApp (format international sans le '+', ex: 33600000000)
-  const numeroTelephone = "393513418945"; // Remplacez par votre numéro WhatsApp au format international
+  const numeroTelephone = "224627288828"; // Remplacez par votre numéro WhatsApp au format international
 
   // 3. Construction du message WhatsApp
   let message = `✨ *Rendez-vous confirmé !* ✨\n\n`;
@@ -161,7 +161,7 @@ function submitForm(event) {
 
   // 4. Envoi vers WhatsApp
   setTimeout(() => {
-  const urlWhatsApp = `https://wa.me/${393513418945}?text=${encodeURIComponent(message)}`;
+  const urlWhatsApp = `https://wa.me/${224627288828}?text=${encodeURIComponent(message)}`;
   window.location.href = urlWhatsApp;}, 2500); // Délai de 500ms pour laisser le temps à l'animation de se terminer
 
 // Masquer le formulaire (étape 2) et afficher la confirmation finale (étape 3)

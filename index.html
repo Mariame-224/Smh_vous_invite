@@ -17,8 +17,8 @@
     
     <!-- ÉTAPE 1 : La question -->
     <div id="step-1" class="step active">
-      <h1>Une petite question...</h1>
-      <p> Veux-tu sortir avec moi ?</p>
+      <h1>Pour nos 1an ensemble</h1>
+      <p> Veux-tu immortaliser ce moment ?</p>
       <div class="btn-group" id="btn-group">
         <button id="btn-yes" class="btn-yes" onclick="nextStep(2)">Oui !</button>
         <button id="btn-no" class="btn-no" onclick="showErrorModal()">Non</button>
@@ -28,25 +28,25 @@
     <!-- ÉTAPE 2 : Choix de l'activité, de la date et de l'heure -->
     <div id="step-2" class="step">
       <h2>Excellente décision ! 🔥</h2>
-      <p>j'attends le programme !</p>
+      <p>j'attends le programme madame comme tu voudras !</p>
 
       <form id="invite-form" onsubmit="submitForm(event)">
         <div class="options">
           <label class="option-card">
-            <input type="radio" name="activity" value="Un délicieux restaurant" required checked>
-            <span>Restaurant🍷</span>
+            <input type="radio" name="activity" value="Un délicieux repas au restaurant" required checked>
+            <span>Un delicieux repas au restaurant🍷</span>
           </label>
           <label class="option-card">
-            <input type="radio" name="activity" value="Une séance au cinéma" required>
-            <span>Cinéma 🍿</span>
+            <input type="radio" name="activity" value="Regarder un film au cinéma" required>
+            <span>Regarder un film au Cinéma 🍿</span>
           </label>
           <label class="option-card">
-            <input type="radio" name="activity" value="Une simple promenade" required>
-            <span>Une promenade tranquille 🌙</span>
+            <input type="radio" name="activity" value="Une promenade tranquille en amoureux" required>
+            <span>Une promenade tranquille entre amoureux🌙</span>
           </label>
           <label class="option-card">
-            <input type="radio" name="activity" value="Une soirée jeux de société" required>
-            <span>Soirée jeux de société 🎲</span>
+            <input type="radio" name="activity" value="Une soirée jeux: Action/Vérité" required>
+            <span> UNe soirée jeux: Action/Vérité 🎲</span>
           </label> 
         <label class="option-card">
             <input type="radio" name="activity" value="fast-food" required>
@@ -70,11 +70,11 @@
 
     <!-- ÉTAPE 3 : Message final & confirmation -->
     <div id="step-3" class="step">
-      <h2>ET c'est bonnnnnn! 😉</h2>
-      <p>Merciiii d'avoir acceptéeee.</p>
+      <h2>Parfait! 😉</h2>
+      <p>on le fêtera comme il se doit.</p>
       
       <div class="spicy-note">
-        "Prépare-toi bien, parce que je ne compte pas te laisser filer de sitôt une fois sur place... 😏🔥"
+        "Prépare-toi bien ma VIE, parce que je ne compte pas te laisser filer de sitôt une fois sur place... 😏🔥"
       </div>
     </div>
   </div>
@@ -83,9 +83,9 @@
   <div id="error-modal-overlay" class="modal-overlay">
     <div class="modal-card">
       <div class="modal-icon">⚠️</div>
-      <h3>Erreur Système 404</h3>
+      <h3>Attention !</h3>
       <p>L'option <strong>"Non"</strong> est momentanément indisponible sur ce téléphone. Veuillez sélectionner l'option valide ! 😉</p>
-      <button class="btn-modal" onclick="closeErrorModal()">Compris, je clique sur Oui !</button>
+      <button class="btn-modal" onclick="closeErrorModal()">Allerrrrr ouiiiii !</button>
     </div>
   </div>
 
