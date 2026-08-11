@@ -11,14 +11,15 @@
 
   <!-- Conteneur pour les cœurs flottants d'arrière-plan -->
   <div id="hearts-container"></div>
-
+  <!-- Conteneur pour les photos montantes -->
+  <div id="photos-container"></div>
   <!-- Carte d'invitation principale -->
   <div class="card">
     
     <!-- ÉTAPE 1 : La question -->
     <div id="step-1" class="step active">
-      <h1>Pour nos 1an ensemble</h1>
-      <p> Veux-tu immortaliser ce moment ?</p>
+      <h1>Pour nos 2 ans ensemble</h1>
+      <p> Veux-tu immortaliser ce moment Ma Seule ?</p>
       <div class="btn-group" id="btn-group">
         <button id="btn-yes" class="btn-yes" onclick="nextStep(2)">Oui !</button>
         <button id="btn-no" class="btn-no" onclick="showErrorModal()">Non</button>
@@ -33,25 +34,29 @@
       <form id="invite-form" onsubmit="submitForm(event)">
         <div class="options">
           <label class="option-card">
-            <input type="radio" name="activity" value="Un délicieux repas au restaurant" required checked>
+            <input type="radio" name="activity" value="Un délicieux repas au restaurant" required>
             <span>Un delicieux repas au restaurant🍷</span>
           </label>
-          <label class="option-card">
-            <input type="radio" name="activity" value="Regarder un film au cinéma" required>
-            <span>Regarder un film au Cinéma 🍿</span>
+                  <label class="option-card">
+            <input type="radio" name="activity" value="Mammamia" required>
+            <span>Mammamia 🍝</span>
           </label>
           <label class="option-card">
-            <input type="radio" name="activity" value="Une promenade tranquille en amoureux" required>
-            <span>Une promenade tranquille entre amoureux🌙</span>
+            <input type="radio" name="activity" value="Une promenade tranquille à la plage" required>
+            <span>Une promenade tranquille à la plage🏖️</span>
           </label>
           <label class="option-card">
-            <input type="radio" name="activity" value="Une soirée jeux: Action/Vérité" required>
-            <span> UNe soirée jeux: Action/Vérité 🎲</span>
+            <input type="radio" name="activity" value="Aller au lounge🍸" required>
+            <span>Aller au lounge🍸</span>
+          </label>
+          <label class="option-card">
+            <input type="radio" name="activity" value="Stars Classe prendre des glaces 🍦" required>
+            <span>Stars Classe prendre des glaces 🍦</span>
+          </label>
+          <label class="option-card">
+            <input type="radio" name="activity" value="Une soirée jeux coquins: Action/Vérité " required>
+            <span> Une soirée jeux coquins: Action/Vérité 🎲</span>
           </label> 
-        <label class="option-card">
-            <input type="radio" name="activity" value="fast-food" required>
-            <span>Fast-food 🍔</span>
-          </label>
         </div>
 
         <div class="field-group">
@@ -70,8 +75,8 @@
 
     <!-- ÉTAPE 3 : Message final & confirmation -->
     <div id="step-3" class="step">
-      <h2>Parfait! 😉</h2>
-      <p>on le fêtera comme il se doit.</p>
+      <h2>Hummm Parfait! 😉</h2>
+      <p>Tes désires sont mes ordres.</p>
       
       <div class="spicy-note">
         "Prépare-toi bien ma VIE, parce que je ne compte pas te laisser filer de sitôt une fois sur place... 😏🔥"

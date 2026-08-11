@@ -97,8 +97,53 @@ function createHeart() {
     heart.remove();
   }, duration * 1000);
 }
-
 setInterval(createHeart, 400);
+
+
+// C. ANIMATION DES PHOTOS FLOTTANTES
+// ------------------------------------------------------------------
+function createPhoto() {
+  const container = document.getElementById('hearts-container');
+  if (!container) return;
+
+  const photos = [
+    'poto9 (1).png',
+    'poto9 (2).png',
+    'poto9 (3).png',
+    'poto9 (4).png',
+    'poto9 (5).png',
+    'poto9 (6).png',
+    'poto9 (7).png',
+    'poto9 (8).png',
+    'poto9 (9).png'
+  ];
+
+  const photo = document.createElement('img');
+  photo.classList.add('photo-rising');
+  
+  // Choix d'une photo aléatoire dans la liste
+  const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+  photo.src = `images/${randomPhoto}`;
+
+  // Position et taille aléatoires
+  photo.style.left = Math.random() * 90 + 'vw';
+  const width = Math.random() * 20 + 60; // taille entre 60px et 80px
+  photo.style.width = width + 'px';
+
+  // Durée de montée aléatoire
+  const duration = Math.random() * 4 + 4;
+  photo.style.animationDuration = duration + 's';
+
+  container.appendChild(photo);
+
+  // Suppression après l'animation
+  setTimeout(() => {
+    photo.remove();
+  }, duration * 1000);
+}
+
+// Génère une photo toutes les 2.5 secondes
+setInterval(createPhoto, 1000);setInterval(createHeart, 400);
 
 // ------------------------------------------------------------------
 // C. GESTION DU BOUTON "NON" & MODALE
@@ -137,7 +182,12 @@ function nextStep(stepNumber) {
 function submitForm(event) {
   event.preventDefault();
 
-// 1. Récupération des valeurs saisies à l'étape 2const activityInput = document.querySelector('input[name="activity"]:checked');
+// 1. Récupération des valeurs saisies à l'étape 2
+const activityInput = document.querySelector('input[name="activity"]:checked');
+if (!activityInput) {
+    alert("Veuillez sélectionner une activité.");
+    return;
+  }
   const activity = document.querySelector('input[name="activity"]:checked').value;
   const dateInput = document.getElementById('date').value;
   const timeInput = document.getElementById('time').value;
@@ -149,8 +199,8 @@ function submitForm(event) {
     dateFormatee = `${jour}/${mois}/${annee}`;
   }
 
-  // 2. Numéro WhatsApp (format international sans le '+', ex: 33600000000)
-  const numeroTelephone = "224627288828"; // Remplacez par votre numéro WhatsApp au format international
+  // 2. Numéro WhatsApp 
+  const numeroTelephone = "224627288828"; 
 
   // 3. Construction du message WhatsApp
   let message = `✨ *Rendez-vous confirmé !* ✨\n\n`;

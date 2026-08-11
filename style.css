@@ -74,7 +74,17 @@ body {
     opacity: 0;
   }
 }
-
+/* Animation et style des photos montantes */
+.photo-rising {
+  position: absolute;
+  bottom: -100px;
+  pointer-events: none;
+  opacity: 0.35;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  animation: floatUp linear infinite;
+}
 /* ==========================================================================
    4. CARTE PRINCIPALE
    ========================================================================== */
@@ -85,10 +95,10 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
   width: 92%; /* Occupe la quasi-totalité de la largeur sur mobile */
-  max-width: 400px;
+  max-width: 85vh; /* Limite la largeur sur les écrans plus grands */
   position: relative;
   z-index: 10;
-  overflow: hidden;
+  overflow-y: auto;
   transition: all 0.3s ease-in-out;
 }
 
@@ -125,11 +135,13 @@ p {
 }
 
 button, .btn-submit {
+  position: relative;
+  Z-index: 1;
   padding: 12px 28px;
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s, font-size 0.2s, padding 0.2s;
 }
@@ -150,9 +162,10 @@ button, .btn-submit {
 .options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   text-align: left;
-  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
 }
 
 .option-card {
