@@ -207,7 +207,7 @@ if (!activityInput) {
   message += `📍 *Activité :* ${activity}\n`;
   message += `📅 *Date :* ${dateFormatee || "Non précisée"}\n`;
   message += `⏰ *Heure :* ${timeInput || "Non précisée"}\n\n`;
-  message += `À très vite ! 😉`;
+  message += `À très vite ma VIE ! 😉`;
 
   // 4. Envoi vers WhatsApp
   setTimeout(() => {
