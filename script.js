@@ -126,12 +126,12 @@ function createPhoto() {
   photo.src = `images/${randomPhoto}`;
 
   // Position et taille aléatoires
-  photo.style.left = Math.random() * 90 + 'vw';
-  const width = Math.random() * 20 + 60; // taille entre 60px et 80px
+  photo.style.left = Math.random() * 100+ 'vw';
+  const width = Math.random() * 40 + 60; // taille entre 60px et 80px
   photo.style.width = width + 'px';
 
   // Durée de montée aléatoire
-  const duration = Math.random() * 4 + 4;
+  const duration = Math.random() * 6 + 4;
   photo.style.animationDuration = duration + 's';
 
   container.appendChild(photo);
@@ -212,7 +212,7 @@ if (!activityInput) {
   // 4. Envoi vers WhatsApp
   setTimeout(() => {
   const urlWhatsApp = `https://wa.me/${224627288828}?text=${encodeURIComponent(message)}`;
-  window.location.href = urlWhatsApp;}, 3500); // Délai de 3500ms pour laisser le temps à l'animation de se terminer
+  window.location.href = urlWhatsApp;}, 4000); // Délai de 4000ms pour laisser le temps à l'animation de se terminer
 
 // Masquer le formulaire (étape 2) et afficher la confirmation finale (étape 3)
 document.getElementById('step-2').classList.remove('active');
